@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <title>Anonymous</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'anonymous/css/main_style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Electrolize&display=swap" rel="stylesheet">
+</head>
+<body onload="printtext()">
+<div class="wrapper">
+    <div class="label">
+        <font id="text"></font>
+    </div>
+</div>
+
+<script src="{% static 'anonymous/js/dynamics.js' %}"></script>
+
+</body>
+</html>

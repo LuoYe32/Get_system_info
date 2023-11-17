@@ -1,12 +1,19 @@
 from django.db import models
 
-class File(models.Model):
-    file_name = models.CharField(max_length=255)
-    file_data = models.FileField(upload_to='files/')
-
-    def __str__(self):
-        return self.file_name
+class SystemInfo(models.Model):
+    system = models.CharField(max_length=100)
+    node_name = models.CharField(max_length=100)
+    release = models.CharField(max_length=100)
+    version = models.CharField(max_length=100)
+    machine = models.CharField(max_length=100)
+    processor = models.CharField(max_length=100)
+    host_name = models.CharField(max_length=100)
+    ip_address = models.GenericIPAddressField()
+    cpu_cores = models.CharField(max_length=100)
+    cpu_threads = models.CharField(max_length=100)
+    ram = models.CharField(max_length=100)
+    disk_space = models.CharField(max_length=100)
 
     class Meta:
-        verbose_name = "Файл"
-        verbose_name_plural = "Файлы"
+        verbose_name = "System_info"
+        verbose_name_plural = "System_info"
